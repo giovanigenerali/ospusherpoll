@@ -3,7 +3,7 @@
 Real time poll using Pusher, MongoDB, Node.js and Express.
 
 ## Setup
-Edit the `scripts/set-vars.js` file and add your MongoDB URI and Pusher key info
+Edit the [`scripts/set-vars.js`](https://github.com/wgenial/ospusherpoll/blob/master/scripts/vars.js) file and add your MongoDB URI and Pusher key info
 
 ## Install
 `npm install`
