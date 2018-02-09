@@ -1,0 +1,32 @@
+{
+  "name": "ospusherpoll",
+  "version": "1.0.0",
+  "description": "Real time poll using Pusher, MongoDB, Node.js and Express",
+  "main": "app.js",
+  "homepage": "https://github.com/wgenial/ospusherpoll",
+  "scripts": {
+    "build": "node ./scripts/set-vars.js && webpack --config ./scripts/webpack.config.js --display-error-details",
+    "build:dev": "NODE_ENV=development npm run build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "dev": "npm run build:dev && npm-run-all --parallel watch:server watch:build",
+    "watch:build": "webpack --config ./scripts/webpack.config.js --display-error-details --watch",
+    "watch:server": "nodemon app.js",
+    "prestart": "npm run build:prod",
+    "start": "node app.js"
+  },
+  "author": "WGenial",
+
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3",
+    "pusher": "^1.5.1",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12",
+    "npm-run-all": "^4.1.2"
+  }
+}
